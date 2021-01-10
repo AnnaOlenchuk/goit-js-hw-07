@@ -1,6 +1,7 @@
 body {
     width: 1600px;
     align-items: center;
+    padding-bottom: 40px;
 }
 
 input {
