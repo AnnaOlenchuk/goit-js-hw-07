@@ -21,9 +21,6 @@ const galleryRef = document.querySelector('#gallery');
 const createImageGallery = images.map(image => {
     const galleryItemRef = document.createElement('li');
     galleryItemRef.classList.add('js-gallery__item');
-    
-    const imgRef = document.createElement('img');
-    imgRef.classList.add('js-gallery__img');
 
     galleryItemRef
         .insertAdjacentHTML('beforeend', `<img src = ${image.url} alt = "${image.alt}">`);

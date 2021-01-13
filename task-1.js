@@ -1,4 +1,4 @@
-const quantityOfCategories = document.getElementById('categories').getElementsByClassName('item').length;
+const quantityOfCategories = document.getElementById('categories').length;
 console.log(`В списке ${quantityOfCategories} категории`);
 
 

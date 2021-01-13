@@ -6,13 +6,13 @@ const ingredients = [
   'Зелень',
   'Приправы',
 ];
+
+function createListItem(text) {
+  const item = document.createElement('li');
+  item.textContent = text;
+  return item;
+}
+
 const listRef = document.querySelector('#ingredients');
-
-ingredients.forEach(ingredient => {
-    const createListItem = document.createElement('li');
-    createListItem.textContent = ingredient;
-    
-    listRef.appendChild(createListItem);
-});
-
-console.log(listRef);
+const createList = ingredients.map(ingredient => createListItem(ingredient));
+listRef.append(...createList);
