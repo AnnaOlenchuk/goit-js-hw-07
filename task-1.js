@@ -1,11 +1,12 @@
-const quantityOfCategories = document.getElementById('categories').length;
-console.log(`В списке ${quantityOfCategories} категории`);
+
+const categoryRef = document.querySelectorAll('#categories > .item');
+console.log(`В списке ${categoryRef.length} категории`);
 
 
-const categoryUnits = document.querySelectorAll('#categories > .item');
 
-categoryUnits.forEach(item => {
+categoryRef.forEach(item => {
     const categoryNameRef = item.querySelector('h2');
     const categoryElementsRef = item.querySelectorAll('li');
-    return console.log(`Категория: ${categoryNameRef.textContent} \r\nКоличество элементов: ${categoryElementsRef.length}`);
-})
+    return console.log(`Категория: ${categoryNameRef.textContent} 
+    \r\nКоличество элементов: ${categoryElementsRef.length}`);
+});
